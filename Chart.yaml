@@ -1,0 +1,15 @@
+apiVersion: v2
+name: helloworld
+description: A Helm chart for Hello World application
+type: application
+version: 0.1.0
+appVersion: "1.0"
+
+dependencies:
+  - name: nginx
+    version: "18.2.5" # Choose the version you prefer
+    repository: "https://charts.bitnami.com/bitnami"
+  - name: postgresql
+    version: "12.1.0"  # Replace with the desired version
+    repository: https://charts.bitnami.com/bitnami
+ 
