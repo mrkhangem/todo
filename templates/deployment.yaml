@@ -40,6 +40,7 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+              #### add env
           env:
            - name: SPRING_DATASOURCE_URL
              value:  {{ .Values.db.url }}
@@ -51,7 +52,7 @@ spec:
              value: "update"
            - name: SPRING_JPA_SHOW_SQL
              value: "true"
-  
+  ######
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
           readinessProbe:
